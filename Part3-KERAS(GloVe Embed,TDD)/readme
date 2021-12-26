@@ -1,1 +1,1 @@
-
+Here we will use a recurrent neural network model which will be made using KERAS Functional API and to solve our NER problem. In addition we will use Pre-Trained GLoVe Embedding, Many to Many Architecture for last layer(TimeDistributed) and for monitoring and evaluation we will use Callbacks such EarlyStopping and TensorBoard. Note: GloVe Embedding file is not provided in github folder as its size is quite large and so you will have to download it yourself. The instructions on how to download it is provided in the notebook itself.
