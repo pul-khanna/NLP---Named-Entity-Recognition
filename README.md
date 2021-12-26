@@ -1,1 +1,16 @@
-# NLP---Named-Entity-Recognition
+# Named Entity Recognition (Natural Language Processing Task)
+
+Named-entity recognition (NER) (also known as entity identification, entity chunking and entity extraction) is a subtask of information extraction that seeks to locate and classify named entities mentioned in unstructured text into pre-defined categories such as person names, organizations, locations, medical codes, time expressions, quantities, monetary values, percentages, etc. Named Entity Recognition model not only acts as a standard tool for information extraction but it also serves as a foundational and important preprocessing toll for many downstream applications like Machine Translation, Question-Answering, Customer Feedback Handling, and even Text Summarization. NER has many real-life problem applications such as being used extensively in biomedical data for gene identification, DNA identification, and also the identification of drug names and disease names, monitoring social media trends and extracting entities from Twitter and Reddit forums, extracting entity names from electronuc medical records, Automating the Recommendation System etc
+
+The dataset is extracted from Twitter and is provided by National Research Univeristy Higher School of Economics, Saint Petersburg. The dataset is represented with BIO tagging. In BIO tagging we label any token that begins a span of interest with the label B, tokens that occur inside a span are tagged with an I, and any tokens outside of any span of interest are labeled O. While there is only one O tag, we’ll have distinct B and I tags for each named entity class. Here we treat NER like a word-by-word sequence labeling task, via tags that capture both the boundary and the named entity type. 
+
+The dataset is divided into 3 parts, training, validation and test data. (Provided in the main/root folder). We will try to recognize named entities from Twitter dataset with LSTMs. Here step-by-step guidance is provided on how to approach the problem using Keras Sequentional and Keras functional API, use of different techniques like binning, using pre-trained embeddings and different architectures.
+
+Part 1: Here we will use a recurrent neural network model which will be made using KERAS Sequentional API. For simplicity, we will consider sequences of equal length for our model.
+
+Part 2: Here we will use a recurrent neural network model which will be made using KERAS Functional API. We will demonstrate here how to use binning technique to make our model more efficient.
+
+Part 3: Here we will use a recurrent neural network model which will be made using KERAS Functional API and to solve our NER problem. In addition we will use Pre-Trained GLoVe Embedding, Many to Many Architecture for last layer(TimeDistributed) and for monitoring and evaluation we will use Callbacks such EarlyStopping and TensorBoard.
+Note: GloVe Embedding file is not provided in github folder as its size is quite large and so you will have to download it yourself. The instructions on how to download it is provided in the notebook itself.
+
+Note: Tensorflow(ver 2.5 and below) and numpy(ver 2 and above) versions don't seem to support each other and thus wont work. Make sure to use the latest version of tensorflow and numpy or with tensoflow(ver2.5) should use numpy(ver 1.19.5). If can of any problems or any doubt, I would highly recommend to run the code in google colab as it wouldn't have any installation conflicts/errors present on a system.
