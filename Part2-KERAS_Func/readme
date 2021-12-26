@@ -1,1 +1,1 @@
-
+Here we will use a recurrent neural network model which will be made using KERAS Functional API. We will demonstrate here how to use binning technique to make our model more efficient.
